@@ -405,11 +405,11 @@ foreach my $kk (0..$#filename) {
 my $ingene =$#finalgenelist+1;
 my $outgene =$#outgenelist+1;
 my $cmd33="md $TEMdir\\TEM3_blastOUT_S\\Discard";##########################
-system $cmd33 || die "Step 3: Can't create blastOUT directory '$TEMdir\\TEM3_blastOUT_S\\Discard'\n";
+system $cmd33 || die "Step 3: Can't create blastOUT directory '$TEMdir\\TEM3_blastOUT_S\\Discard'!\n";
 my $dis=0;
 foreach my $kk (@outgenome) {
 	my $cmd333="move .\\$TEMdir\\TEM3_blastOUT_S\\$kk .\\$TEMdir\\TEM3_blastOUT_S\\Discard\\$kk";
-	system $cmd333;
+	system $cmd333 || die "Step 3: Can't move '.\\$TEMdir\\TEM3_blastOUT_S\\$kk' into '.\\$TEMdir\\TEM3_blastOUT_S\\Discard\\$kk'!\n";
 	$dis++;
 }
 my $ingenomeN=$#finalgenome+1;
@@ -449,7 +449,7 @@ print LOG "Step 4: According to the Step 3, $ingenomeN genomes harboring >= $cut
 
 foreach my $i1 (@query4) {
 	next unless $i1=~ /.\.fas/;
-		
+	next unless $i1 ~~ @finalgenome;
 	$numg++;
 	if ($ARGV[2] eq "A3") {
 	
