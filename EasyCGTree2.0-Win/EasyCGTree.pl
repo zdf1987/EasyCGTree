@@ -451,7 +451,7 @@ foreach my $i1 (@query4) {
 	next unless $i1=~ /.\.fas/;
 	next unless $i1 ~~ @finalgenome;
 	$numg++;
-	if ($ARGV[2] eq "A3") {
+	if ($ARGV[3] eq "prot") {
 	
 
 	
