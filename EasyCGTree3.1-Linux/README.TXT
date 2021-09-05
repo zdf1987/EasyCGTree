@@ -1,0 +1,26 @@
+====== EasyCGTree ======
+	Version 3.1
+by Dao-Feng Zhang (Hohai University, China)
+
+EasyCGTree is An Easy Tool for Constructing Core-Gene Tree.
+
+EasyCGTree is a Perl script, developed to construct phylogenetic tree by taking microbial genomes or proteomes in fasta format and reference sequences (protein) of a set of core genes as input data. It has integrated all the steps needed between the input data and the resulted tree file into one Perl script, which would make it easier to infer a core-gene tree.
+
+For the installation and usage of EasyCGTree, please refer to Manual-EasyCGTree.pdf.
+
+There is also a brief tutorial in Manual-EasyCGTree.pdf.
+
+
+-=- Change Log 3.1 -=-
+1. Add support of tree inference of SNPs and supertree aproaches.
+2. Optimize the command line setting and ERROR report.
+
+Fix the bug in the Perl converter Converter_draft.pl.
+
+-=- Change Log 2.2 -=-
+1.A new script (GetRepRef.pl) was developed for Linux version to screen representative query data sets. It will efficiently reduce time cost when using it before a run.
+
+-=- Change Log 2.1 -=-
+1. Add support of tree inference from amino acid sequence.
+2. Optimize the command line setting.
+3. Fix the bug in GetReferencFromGTDB.pl and FormatNames.pl.
